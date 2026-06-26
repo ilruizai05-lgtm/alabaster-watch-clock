@@ -1,0 +1,25 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    -webkit-text-size-adjust: 100%;
+  }
+  body {
+    @apply font-sans bg-cream text-ink overflow-x-hidden;
+    -webkit-font-smoothing: antialiased;
+  }
+  img { @apply max-w-full block; }
+  a { @apply text-inherit no-underline; }
+}
+
+@layer utilities {
+  .gold-line {
+    width: 40px;
+    height: 1px;
+    background: theme('colors.gold.DEFAULT');
+    margin: 0 auto 1.5rem;
+  }
+}
