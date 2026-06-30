@@ -1,69 +1,48 @@
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 import MobileMenu from './MobileMenu';
+
+const navLinks = [
+  { label: 'Services', href: '#services' },
+  { label: 'Our Story', href: '#story' },
+  { label: 'Reviews', href: '#reviews' },
+  { label: 'Repair Request', href: '#repair' },
+  { label: 'Visit', href: '#visit' },
+];
 
 export default function Header() {
   const [menuOpen, setMenuOpen] = useState(false);
-  const [scrolled, setScrolled] = useState(false);
-
-  useEffect(() => {
-    const onScroll = () => setScrolled(window.scrollY > 20);
-    window.addEventListener('scroll', onScroll);
-    return () => window.removeEventListener('scroll', onScroll);
-  }, []);
-
-  const navLinks = [
-    { label: 'Services', href: '#services' },
-    { label: 'Our Story', href: '#story' },
-    { label: 'Reviews', href: '#reviews' },
-    { label: 'Visit', href: '#visit' },
-  ];
 
   return (
     <>
-      {/* Top bar */}
-      <div className="bg-navy-deep text-cream text-xs tracking-widest py-2 text-center uppercase">
-        ★ Master Watchmaker Since 1971 · Vienna, Virginia ★
+      <div className="topbar">
+        <span className="gold">★</span>&nbsp; Master Watchmaker Since 1971 &nbsp;
+        <span className="gold">·</span>&nbsp; Vienna, Virginia &nbsp;
+        <span className="gold">★</span>
       </div>
 
-      {/* Main header */}
-      <header className={`sticky top-0 z-50 bg-navy transition-shadow duration-300 ${scrolled ? 'shadow-lg shadow-black/40' : ''}`}>
-        <div className="max-w-6xl mx-auto px-5 py-4 flex items-center justify-between">
-          {/* Logo */}
-          <a href="#" className="flex flex-col leading-tight">
-            <span className="font-serif text-gold text-xl font-semibold tracking-wide">John Alabaster</span>
-            <span className="font-sans text-cream/70 text-xs tracking-widest uppercase">Watch & Clock</span>
+      <header>
+        <div className="nav-wrap">
+          <a href="#top" className="brand">
+            <div className="brand-logo">
+              <svg viewBox="0 0 24 24" fill="none" stroke="#c9a961" strokeWidth="1.5">
+                <circle cx="12" cy="12" r="9" />
+                <path d="M12 7v5l3 2" />
+              </svg>
+            </div>
+            <div className="brand-text">
+              John Alabaster
+              <small>Watch &amp; Clock</small>
+            </div>
           </a>
 
-          {/* Desktop nav */}
-          <nav className="hidden md:flex items-center gap-8">
+          <nav className="nav-desktop">
             {navLinks.map(link => (
-              <a
-                key={link.href}
-                href={link.href}
-                className="font-sans text-cream/80 text-sm tracking-wide hover:text-gold transition-colors duration-200"
-              >
-                {link.label}
-              </a>
+              <a key={link.href} href={link.href}>{link.label}</a>
             ))}
           </nav>
 
-          {/* Desktop CTA */}
-          <a
-            href="#repair"
-            className="hidden md:inline-block bg-gold text-navy font-sans font-semibold text-sm px-5 py-2.5 rounded hover:bg-gold-bright transition-colors duration-200"
-          >
-            Request a Repair
-          </a>
-
-          {/* Mobile hamburger */}
-          <button
-            onClick={() => setMenuOpen(true)}
-            className="md:hidden text-cream p-2"
-            aria-label="Open menu"
-          >
-            <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
-            </svg>
+          <button className="hamburger" onClick={() => setMenuOpen(true)} aria-label="Open menu">
+            <span></span><span></span><span></span>
           </button>
         </div>
       </header>

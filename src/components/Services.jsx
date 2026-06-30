@@ -1,47 +1,60 @@
-import { services } from '../data/services';
-
-const icons = {
-  "Watch Servicing": (
-    <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-      <circle cx="12" cy="12" r="7" strokeWidth="1.5"/>
-      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5" d="M12 8v4l2.5 2.5M8.5 3.5h7M8.5 20.5h7"/>
-    </svg>
-  ),
-  "Clock Servicing": (
-    <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-      <rect x="5" y="2" width="14" height="20" rx="2" strokeWidth="1.5"/>
-      <circle cx="12" cy="13" r="4" strokeWidth="1.5"/>
-      <path strokeLinecap="round" strokeWidth="1.5" d="M12 11v2l1.5 1.5M9 6h6"/>
-    </svg>
-  ),
-  "House Calls": (
-    <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"/>
-    </svg>
-  )
-};
-
 export default function Services() {
   return (
-    <section id="services" className="bg-cream py-20">
-      <div className="max-w-6xl mx-auto px-5">
-        <div className="text-center mb-14">
-          <p className="font-sans text-gold text-xs tracking-widest uppercase mb-3">What We Do</p>
-          <div className="gold-line" />
-          <h2 className="font-serif text-ink text-4xl sm:text-5xl font-semibold">
-            Expert <em className="italic text-gold-dark">care</em> for every timepiece.
-          </h2>
-        </div>
+    <section className="services-section" id="services">
+      <div className="container">
+        <div className="section-eyebrow">What We Do</div>
+        <h2 className="section-title">Craftsmanship for <em>every timepiece.</em></h2>
+        <p className="section-intro">
+          From a vintage heirloom to a modern Swiss masterpiece, every watch and clock receives the same meticulous care.
+        </p>
 
-        <div className="grid md:grid-cols-3 gap-8">
-          {services.map((service, i) => (
-            <div key={i} className="bg-white border border-gold/20 rounded-lg p-8 text-center hover:shadow-lg hover:shadow-gold/10 transition-all duration-300">
-              <div className="text-gold mb-5 flex justify-center">{icons[service.title]}</div>
-              <h3 className="font-serif text-ink text-2xl font-semibold mb-4">{service.title}</h3>
-              <div className="w-8 h-px bg-gold/50 mx-auto mb-4" />
-              <p className="font-sans text-ink/70 text-sm leading-relaxed">{service.description}</p>
+        <div className="services-grid">
+          <div className="service-card">
+            <div className="icon">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
+                <circle cx="12" cy="12" r="9" />
+                <path d="M12 7v5l3 2" />
+                <circle cx="12" cy="12" r="1" fill="currentColor" />
+              </svg>
             </div>
-          ))}
+            <h3>Watch Servicing</h3>
+            <p>Complete overhaul, movement repair, gasket replacement, water resistance restoration, and crystal replacement. Genuine parts only.</p>
+          </div>
+
+          <div className="service-card">
+            <div className="icon">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
+                <rect x="6" y="3" width="12" height="18" rx="1" />
+                <circle cx="12" cy="9" r="3" />
+                <path d="M12 14v4" />
+              </svg>
+            </div>
+            <h3>Clock Servicing</h3>
+            <p>Mantel clocks, wall clocks, and grandfather clocks. Cleaning, oiling, regulation, and full restoration of antique movements.</p>
+          </div>
+
+          <div className="service-card">
+            <div className="icon">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
+                <path d="M3 9l9-6 9 6v11a2 2 0 01-2 2H5a2 2 0 01-2-2z" />
+                <path d="M9 22V12h6v10" />
+              </svg>
+            </div>
+            <h3>House Calls</h3>
+            <p>Grandfather clocks deserve white-glove service. We come to your home for setup, regulation, and on-site servicing of large timepieces.</p>
+          </div>
+
+          <div className="service-card">
+            <div className="icon">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
+                <circle cx="12" cy="12" r="9" />
+                <path d="M12 8v4l3 3" />
+                <path d="M3.6 9h1.8M18.6 9h1.8M12 3.6v1.8M12 18.6v1.8" />
+              </svg>
+            </div>
+            <h3>Pre-Owned Watches</h3>
+            <p>Browse our curated selection of pre-owned timepieces. Every watch is inspected and serviced in-house before sale, so you buy with confidence.</p>
+          </div>
         </div>
       </div>
     </section>

@@ -1,79 +1,62 @@
 export default function Visit() {
-  const hours = [
-    { days: "Sun – Mon", time: "Closed" },
-    { days: "Tue – Fri", time: "10:00 AM – 5:00 PM" },
-    { days: "Saturday", time: "9:00 AM – 2:00 PM" },
-  ];
-
   return (
-    <section id="visit" className="bg-cream-soft py-20">
-      <div className="max-w-6xl mx-auto px-5">
-        <div className="text-center mb-14">
-          <p className="font-sans text-gold text-xs tracking-widest uppercase mb-3">Find Us</p>
-          <div className="gold-line" />
-          <h2 className="font-serif text-ink text-4xl sm:text-5xl font-semibold mb-4">
-            Visit the <em className="italic text-gold-dark">shop.</em>
-          </h2>
-          <p className="font-sans text-ink/60 text-sm">
-            Walk-ins welcome during business hours. Free in-shop estimates with no appointment needed.
-          </p>
-        </div>
+    <section className="visit-section" id="visit">
+      <div className="container">
+        <div className="section-eyebrow">Find Us</div>
+        <h2 className="section-title">Visit the <em>shop.</em></h2>
+        <p className="section-intro">
+          Walk-ins welcome during business hours. Free in-shop estimates with no appointment needed.
+        </p>
 
-        <div className="grid md:grid-cols-3 gap-6">
-          {/* Location */}
-          <div className="bg-white border border-gold/20 rounded-lg p-8 text-center hover:shadow-md hover:shadow-gold/10 transition-all">
-            <div className="text-gold mb-5 flex justify-center">
-              <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/>
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/>
-              </svg>
-            </div>
-            <h3 className="font-serif text-ink text-xl font-semibold mb-4">Location</h3>
-            <div className="w-6 h-px bg-gold/40 mx-auto mb-4" />
-            <a
-              href="https://maps.google.com/?q=301A+Maple+Ave+W,+Vienna,+VA+22180"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="font-sans text-ink/70 text-sm leading-relaxed hover:text-gold transition-colors"
-            >
-              301A Maple Avenue West<br />
-              Vienna, VA 22180
-            </a>
+        <div className="visit-grid">
+          <div className="visit-card">
+            <h3>
+              <span className="icon">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
+                  <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z" />
+                  <circle cx="12" cy="10" r="3" />
+                </svg>
+              </span>
+              Location
+            </h3>
+            <p>
+              <a href="https://maps.google.com/?q=301A+Maple+Ave+W,+Vienna,+VA+22180" target="_blank" rel="noopener noreferrer">
+                301A Maple Avenue West<br />
+                Vienna, VA 22180
+              </a>
+            </p>
           </div>
 
-          {/* Hours */}
-          <div className="bg-white border border-gold/20 rounded-lg p-8 text-center hover:shadow-md hover:shadow-gold/10 transition-all">
-            <div className="text-gold mb-5 flex justify-center">
-              <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <circle cx="12" cy="12" r="9" strokeWidth={1.5}/>
-                <path strokeLinecap="round" strokeWidth={1.5} d="M12 7v5l3 3"/>
-              </svg>
-            </div>
-            <h3 className="font-serif text-ink text-xl font-semibold mb-4">Hours</h3>
-            <div className="w-6 h-px bg-gold/40 mx-auto mb-4" />
-            <div className="space-y-2">
-              {hours.map((h, i) => (
-                <div key={i} className="flex justify-between font-sans text-sm">
-                  <span className="text-ink/60">{h.days}</span>
-                  <span className={h.time === 'Closed' ? 'text-ink/40' : 'text-ink font-medium'}>{h.time}</span>
-                </div>
-              ))}
-            </div>
+          <div className="visit-card">
+            <h3>
+              <span className="icon">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
+                  <circle cx="12" cy="12" r="9" />
+                  <path d="M12 7v5l3 2" />
+                </svg>
+              </span>
+              Hours
+            </h3>
+            <ul className="hours-list">
+              <li><span className="day">Sun – Mon</span><span>Closed</span></li>
+              <li><span className="day">Tue – Fri</span><span>10:00 AM – 5:00 PM</span></li>
+              <li><span className="day">Saturday</span><span>9:00 AM – 2:00 PM</span></li>
+            </ul>
           </div>
 
-          {/* Contact */}
-          <div className="bg-white border border-gold/20 rounded-lg p-8 text-center hover:shadow-md hover:shadow-gold/10 transition-all">
-            <div className="text-gold mb-5 flex justify-center">
-              <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/>
-              </svg>
-            </div>
-            <h3 className="font-serif text-ink text-xl font-semibold mb-4">Contact</h3>
-            <div className="w-6 h-px bg-gold/40 mx-auto mb-4" />
-            <a href="tel:7039381942" className="block font-sans text-gold text-lg font-semibold hover:text-gold-bright transition-colors mb-3">
-              (703) 938-1942
-            </a>
-            <p className="font-sans text-ink/50 text-xs">Accepts credit cards & Apple Pay</p>
+          <div className="visit-card">
+            <h3>
+              <span className="icon">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
+                  <path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z" />
+                </svg>
+              </span>
+              Contact
+            </h3>
+            <p>
+              <a href="tel:7039381942"><strong>(703) 938-1942</strong></a><br />
+              <span style={{ fontSize: '13px', letterSpacing: '0.05em' }}>Accepts credit cards &amp; Apple Pay</span>
+            </p>
           </div>
         </div>
       </div>

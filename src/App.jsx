@@ -15,17 +15,15 @@ export default function App() {
   return (
     <>
       <Header />
-      <main className="pb-16 md:pb-0">
-        <Hero />
-        <TrustStrip />
-        <BrandsServiced />
-        <Services />
-        <Story />
-        <WorkGallery />
-        <Reviews />
-        <RepairForm />
-        <Visit />
-      </main>
+      <Hero />
+      <TrustStrip />
+      <BrandsServiced />
+      <Services />
+      <Story />
+      <WorkGallery />
+      <Reviews />
+      <RepairForm />
+      <Visit />
       <Footer />
       <StickyMobileCTA />
     </>
