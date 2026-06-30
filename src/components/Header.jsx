@@ -7,6 +7,7 @@ const navLinks = [
   { label: 'Reviews', href: '#reviews' },
   { label: 'Repair Request', href: '#repair' },
   { label: 'Visit', href: '#visit' },
+  { label: 'About', href: '#about' },
 ];
 
 export default function Header() {

@@ -8,6 +8,7 @@ import WorkGallery from './components/WorkGallery';
 import Reviews from './components/Reviews';
 import RepairForm from './components/RepairForm';
 import Visit from './components/Visit';
+import About from './components/About';
 import Footer from './components/Footer';
 import StickyMobileCTA from './components/StickyMobileCTA';
 import BackToTop from './components/BackToTop';
@@ -28,6 +29,7 @@ export default function App() {
       <Reviews />
       <RepairForm />
       <Visit />
+      <About />
       <Footer />
       <StickyMobileCTA />
       <BackToTop />

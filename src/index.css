@@ -793,3 +793,73 @@ body { padding-bottom: 60px; }
   margin: 16px 0 12px;
 }
 .notfound p { color: var(--cream-soft); margin-bottom: 32px; }
+
+/* ---- ABOUT (WASHINGTON POST FEATURE) ---- */
+.about-section { background: var(--cream-soft); }
+.about-article {
+  max-width: 780px;
+  margin: 50px auto 0;
+  background: #fff;
+  border: 1px solid rgba(13, 27, 42, 0.08);
+  padding: 48px 40px;
+  position: relative;
+}
+.about-article::before {
+  content: '';
+  position: absolute;
+  inset: 8px;
+  border: 1px solid rgba(201, 169, 97, 0.25);
+  pointer-events: none;
+}
+.about-source {
+  font-size: 10px;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  color: var(--gold-dark);
+  font-weight: 600;
+  margin-bottom: 18px;
+}
+.about-kicker {
+  font-size: 12px;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: #8a8a8a;
+  margin-bottom: 8px;
+}
+.about-headline {
+  font-family: var(--serif);
+  font-size: clamp(1.7rem, 5vw, 2.3rem);
+  font-weight: 600;
+  color: var(--navy);
+  line-height: 1.15;
+  margin-bottom: 26px;
+  padding-bottom: 22px;
+  border-bottom: 1px dashed rgba(13, 27, 42, 0.15);
+}
+.about-body p {
+  font-family: var(--serif);
+  font-size: 1.18rem;
+  line-height: 1.7;
+  color: #3a3a3a;
+  margin-bottom: 20px;
+}
+.about-body p:first-of-type::first-letter {
+  font-size: 3.4rem;
+  font-weight: 600;
+  float: left;
+  line-height: 0.82;
+  padding: 6px 12px 0 0;
+  color: var(--gold-dark);
+  font-family: var(--serif);
+}
+.about-byline {
+  margin-top: 28px;
+  padding-top: 20px;
+  border-top: 1px solid rgba(13, 27, 42, 0.1);
+  font-size: 12px;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--gold-dark);
+  font-weight: 600;
+}
+@media (max-width: 600px) { .about-article { padding: 32px 22px; } }
