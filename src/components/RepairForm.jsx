@@ -27,7 +27,7 @@ export default function RepairForm() {
 
   return (
     <section className="form-section" id="repair">
-      <div className="container form-wrap">
+      <div className="container form-wrap reveal">
         <div className="section-eyebrow">Get Started</div>
         <h2 className="section-title">Request a <em>repair</em>.</h2>
         <p className="section-intro">

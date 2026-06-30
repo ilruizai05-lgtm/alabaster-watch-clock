@@ -11,13 +11,13 @@ const work = [
 export default function WorkGallery() {
   return (
     <section className="work-section">
-      <div className="container">
+      <div className="container reveal">
         <div className="section-eyebrow">Recent Work</div>
         <h2 className="section-title">Restored to <em>original glory.</em></h2>
         <div className="work-grid">
           {work.map((w, i) => (
             <div className="work-item" key={i}>
-              <img src={w.img} alt={w.alt} />
+              <img src={w.img} alt={w.alt} loading="lazy" decoding="async" />
               <div className="caption">{w.caption}</div>
             </div>
           ))}

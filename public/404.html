@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Page Not Found — John Alabaster Watch & Clock</title>
+  <meta name="robots" content="noindex" />
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;1,400;1,500&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+  <style>
+    :root{--navy:#0d1b2a;--gold:#c9a961;--gold-bright:#e0bc6f;--cream:#f4ede0;--cream-soft:#ebe2d0;--navy-deep:#060f1a;}
+    *{margin:0;padding:0;box-sizing:border-box;}
+    body{font-family:'Inter',sans-serif;background:var(--navy);color:var(--cream);min-height:100vh;
+      display:flex;align-items:center;justify-content:center;text-align:center;padding:40px 20px;
+      position:relative;overflow:hidden;
+      background-image:radial-gradient(ellipse at top right,rgba(201,169,97,0.15) 0%,transparent 55%);}
+    .inner{position:relative;z-index:2;max-width:520px;}
+    .badge{width:72px;height:72px;border:2px solid var(--gold);border-radius:50%;position:relative;
+      display:flex;align-items:center;justify-content:center;margin:0 auto 28px;
+      background:radial-gradient(circle,#1b2a3e 0%,var(--navy) 100%);}
+    .badge::before{content:'';position:absolute;inset:5px;border:1px dotted var(--gold);border-radius:50%;}
+    .code{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:clamp(4rem,18vw,7rem);
+      color:var(--gold);font-weight:500;line-height:1;}
+    h1{font-family:'Cormorant Garamond',serif;font-size:clamp(1.8rem,6vw,2.6rem);font-weight:500;margin:8px 0 12px;}
+    p{color:var(--cream-soft);margin-bottom:32px;line-height:1.6;}
+    .btn{display:inline-flex;align-items:center;justify-content:center;padding:16px 30px;
+      background:var(--gold);color:var(--navy-deep);font-size:13px;font-weight:600;
+      letter-spacing:0.18em;text-transform:uppercase;text-decoration:none;transition:background 0.2s;}
+    .btn:hover{background:var(--gold-bright);}
+  </style>
+</head>
+<body>
+  <div class="inner">
+    <div class="badge">
+      <svg viewBox="0 0 24 24" fill="none" stroke="#c9a961" stroke-width="1.5" width="34" height="34">
+        <circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/>
+      </svg>
+    </div>
+    <div class="code">404</div>
+    <h1>This page has stopped ticking.</h1>
+    <p>The page you're looking for can't be found — but our master watchmaker is still here to help.</p>
+    <a href="/" class="btn">Back to Home</a>
+  </div>
+</body>
+</html>

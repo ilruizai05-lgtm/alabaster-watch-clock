@@ -1,7 +1,7 @@
 export default function Visit() {
   return (
     <section className="visit-section" id="visit">
-      <div className="container">
+      <div className="container reveal">
         <div className="section-eyebrow">Find Us</div>
         <h2 className="section-title">Visit the <em>shop.</em></h2>
         <p className="section-intro">
@@ -55,9 +55,23 @@ export default function Visit() {
             </h3>
             <p>
               <a href="tel:7039381942"><strong>(703) 938-1942</strong></a><br />
+              <a href="sms:7039381942">Text us</a><br />
               <span style={{ fontSize: '13px', letterSpacing: '0.05em' }}>Accepts credit cards &amp; Apple Pay</span>
             </p>
           </div>
+        </div>
+
+        <div className="map-wrap">
+          <iframe
+            title="John Alabaster Watch & Clock location map"
+            src="https://www.google.com/maps?q=301A+Maple+Ave+W,+Vienna,+VA+22180&output=embed"
+            width="100%"
+            height="100%"
+            style={{ border: 0 }}
+            loading="lazy"
+            referrerPolicy="no-referrer-when-downgrade"
+            allowFullScreen
+          ></iframe>
         </div>
       </div>
     </section>

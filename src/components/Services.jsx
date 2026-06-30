@@ -1,7 +1,7 @@
 export default function Services() {
   return (
     <section className="services-section" id="services">
-      <div className="container">
+      <div className="container reveal">
         <div className="section-eyebrow">What We Do</div>
         <h2 className="section-title">Craftsmanship for <em>every timepiece.</em></h2>
         <p className="section-intro">

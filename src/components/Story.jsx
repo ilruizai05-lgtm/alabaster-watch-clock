@@ -4,9 +4,9 @@ export default function Story() {
   return (
     <section className="story-section" id="story">
       <div className="container">
-        <div className="story-grid">
+        <div className="story-grid reveal">
           <div className="story-image">
-            <img src={shopInterior} alt="Inside John Alabaster Watch and Clock Shop in Vienna, VA" />
+            <img src={shopInterior} alt="Inside John Alabaster Watch and Clock Shop in Vienna, VA" loading="lazy" decoding="async" />
           </div>
           <div className="story-text">
             <div className="section-eyebrow">Our Story</div>

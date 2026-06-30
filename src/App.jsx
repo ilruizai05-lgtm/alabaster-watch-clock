@@ -10,8 +10,12 @@ import RepairForm from './components/RepairForm';
 import Visit from './components/Visit';
 import Footer from './components/Footer';
 import StickyMobileCTA from './components/StickyMobileCTA';
+import BackToTop from './components/BackToTop';
+import useReveal from './hooks/useReveal';
 
 export default function App() {
+  useReveal();
+
   return (
     <>
       <Header />
@@ -26,6 +30,7 @@ export default function App() {
       <Visit />
       <Footer />
       <StickyMobileCTA />
+      <BackToTop />
     </>
   );
 }

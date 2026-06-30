@@ -3,7 +3,7 @@ import { reviews } from '../data/reviews';
 export default function Reviews() {
   return (
     <section className="reviews-section" id="reviews">
-      <div className="container">
+      <div className="container reveal">
         <div className="reviews-header">
           <div className="section-eyebrow">What Our Customers Say</div>
           <h2 className="section-title">Trusted by <em>collectors</em> &amp; families.</h2>
